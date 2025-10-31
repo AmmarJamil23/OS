@@ -1,0 +1,9 @@
+If our program need to read a file, start another program ,or open a network socket, we can do these core tasks securely by using system calls 
+systemcalls => controlled doorways from user space.
+
+Terms and defination:
+Process => A running program with its own virtual address space.
+fork() => duplicate the current process.
+exec() => replace the current process image with a new program.
+wait() => parent waits for child to finish.
+Syscalls => switch the CPU from user mode to kernel mode and back.

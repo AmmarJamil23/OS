@@ -1,2 +1,5 @@
+The main job of operating system is resource management, it makes sure that the CPU, memory, and I/O devices are fairly and safely shared between multiple programs.
+WIthout OS, programs could overwrite each other's data, freeze the CPU, or corrupt hardware.
+
 When you deploy your web server, it runs as a process., understanding processes helps use control them, restart, monitor, or kill safely.
 When debugging memory leaks or CPU cpikses, tools like top, htop, and strace show what the OS sees you program doing.
