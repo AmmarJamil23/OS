@@ -1,0 +1,22 @@
+We open chrome, vs code and spotify at one, yet our cpu has only a few cores. How does the OS run many processes at oncewhen there are fewer CPUs than programs? Ans why does one heavy program sometimes slow down other?
+
+=> The answer is scheduling and context switching.
+=> Scheduling decides what goes next.
+=> COntext Switching saves ths state of the current task (register, memory pointers) andd restores anothers, so when it resumes, it picks up exacttly where it left off.
+
+Even though each process runs in slices, the CPU switches so fast (thousand of times per second) that it feels like everything runs concurrently.
+
+=> Premptive multitasking => The kernel interrupts a process after its time slice expires, saving its CPU state.
+2) COntext sitching is expensive => the more processes, the more overhead (cache misses, TLB flushes, etc)
+Priorites matter: system daemons or real-time tasks get higher priority.
+3) Blocking I/O (e.g waiting for disk or network) causes voluntary context swtiches => CPU time is given someone else.
+As a developer, understanding this helps you write non-blocking or asynchronous code efficiently.
+
+
+WHy system call exists?
+Imaagine writing a text editor that needs to open and save files. If our code could directly touch the disk or memeory, a bug could erase system files or crash the OS. 
+To prevent this, the operating system provides system calls (syscalls)
+=> They are controlled entry gates that let user programs request services like the file I/O, process creation, or networking safely.
+
+To summarize
+==> Programs dont talk to hardware directly, they make requests to the OS kernel through system call.
