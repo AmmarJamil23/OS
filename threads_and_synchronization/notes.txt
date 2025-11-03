@@ -1,0 +1,14 @@
+Imagine building a web browser
+When you open a website following things can happen simultaneously
+1) One part downloads data  2) ANother renders the page  3) Another plays the audio.
+
+=> If each task were a seprate process, we could waste memory duplicating the same data (like image or CSS files). That si inefficient, so we use threads, which let multiple tasks share memory witihin the same process.
+
+==>PROBLEM
+But sharing memoryy introduces new problems like what if two threads modify the same variable at the same time ? Tat is where synchronization comes in.
+
+EXAMPLE:
+=> For examples think of a bank account shared by two people both can deeposit and withdraw (shared resources).
+=> If they both try to update the balance at once, the final result may be wrong
+
+==> To fix this, we add a lock on the account so that only one person can make a change at a time.
