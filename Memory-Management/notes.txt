@@ -1,0 +1,26 @@
+When  we open mltiple apps, each one believes it owns all our RAM. But that's impossible, our laptop has finite memory.
+
+=> Virtual Mmeory and Paging is the concept that allows OS to gives every program its own memory space without interference and crashes.
+
+=> Think of memory like a library, Each program is a readder who thinks who thinks they have their own private table (memory). In reality, the OS librarian keeps track of where every page is stored, in RAM(desk) or on disk (storage room). When a program needs a page not currently on the desk, the OS swaps it in from disk.
+
+=> This illusion is called Virtual Memory, every process get its own virtual address space that the OS maps to physical memory is needed.
+
+Concepts and their Descriptions.
+
+Virtual Memory ==> Logical view of memory that's private to each process.
+Paging ==> Splits memory into small fixed-size blocks (pages, typically 4 KB)
+Page Table ==> Maps virtual pages to physical frames.
+Page Fault ==> Happens when a process tries to access a page not in RAM.
+Swap Space ==> Disk space used to hold inactive pages when RAM is full. 
+
+Each process has its own virtual address space — isolated from others.
+→This isolation prevents one program from corrupting another’s data.
+
+The MMU (Memory Management Unit) in hardware translates virtual → physical addresses using page tables.
+
+Paging lets the OS use memory more flexibly — some pages can be swapped out to disk.
+
+Heap grows upward for dynamic memory (malloc), while stack grows downward for function calls and local variables.
+
+Understanding paging helps diagnose memory leaks, segmentation faults, and performance slowdowns.
