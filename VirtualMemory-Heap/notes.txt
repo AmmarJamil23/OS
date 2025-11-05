@@ -1,0 +1,17 @@
+Virtual Memory Address ==> Each process has its own isolated address range.
+Heap ==> Memory area for dynamic allocations (malloc, new)
+Stack ==> Memory area for function calls and local varaibles.
+brk(), sbrk() ==> Syscalls used by the C library to expand or shrink the heap.
+mmap() ==> Syscall to map large chunks of memory directly into the address space.
+Fragmentation ==> Memory gaps created when allocations and frees are irregular.
+
+
+Virtual memory gives every process the illusion fo infinite space , each with its own address range (0x00000000-0xFFFFFFFF).
+The heap grows dynamically upward as your program allocates more meory. The stack grows downward => they meet only in memory-heavy programs.
+
+
+malloc() requests memory from the OS via brk() or mmap() syscalls.
+ For small allocations => brk() (contiguous heap expansion)
+ For large allocations => mmap() (page-aligned memory mapping).
+ 
+Memory gragmentation can occur over time as allocations and frees leave gaps that is important in long-running systems.
