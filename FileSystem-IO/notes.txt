@@ -1,0 +1,17 @@
+Filesystems and I/O ==> the layer that connects software and hardware.
+
+Concept:
+When our program opens, reads, or writes a file, the data must travel between the CPU, RAM, disk, and possibly the network.
+How does our program knows where a file is stored?
+Hoow does the OS preevent two programs from overwriting each other's data?
+WHy does reading from disk feel slower than reaing from memory.
+==> The answer lies in filesystems and the I/O subsytems => the OS componenets that manage data storage and retrieval.
+
+FIlesystem => Organizes and manages files on storage (eg ext4, NTFS, FAT32)
+File Descriptor (FD) => Integer handle to access an open file.
+Buffered I/O => Data temporarily stored in memory before being written to disk.
+System Calls => open(), read(), write(), close() => interface for file operations.
+I/O Modes => Blocking (waits) vs Non-blocking (returns immediately)
+Kernel Buffer Cache => OS layer that caches frequently accessed data in memory.
+
+
