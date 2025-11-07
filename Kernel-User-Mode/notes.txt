@@ -1,0 +1,14 @@
+How the OS protects itself and our programs using privilege levels => Kernel and User Mode.
+
+The Problem it solves:
+Imagine a buggy video player that accidently tries to write data directly to your disk controller or kernel memory.
+WIthout restrictions, one crash in that app could bring down the entire operating system.
+=> The OS must isolate and protect itself and that is exactly what user mode and kernel mode are for.
+
+CORE CONCEPT:
+Imagine a company
+The kernel => is top management (it can access everything (files, memory, hardware).
+User Programs => are employees (they can make only requests to management.
+==> To make a request, employees submit a form (system call).
+The manager checks it, perform the action , and returns a result.
+
