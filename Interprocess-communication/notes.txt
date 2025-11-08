@@ -1,0 +1,13 @@
+When we open VS Code's terminal and type :
+ls | grep -c
+
+We are actually making two processes communicate => ls and grep.
+But how can two seperate programs running in different memory spaces share data safety? That is the problem Inter-Process Communication solves.
+It enables data exchange and coordination between independent processes whether on the same machine or across networks.
+
+Simple Analogy:
+Imagine each process as a room with a door that's normally locked (seperate memory). IPC is like passing messages through special windows or tubes.
+Pipes => A tube connecting two rooms used for one way local communication.
+Signals => Knocking on the door used for sending simple notifications.
+Sockets => A telephone used for full two way communication (local or networked).
+
