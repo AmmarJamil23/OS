@@ -1,0 +1,21 @@
+By creating the mini--shell we will
+=> Understand how shells use system calls to manage processes.
+=> IMplement command parsing, frk/exec execution, and waiting for child prcoesses.
+=> Support simple built-in commands (cd, exit).
+=> See how pipes (|) and redirection (>, < ) could be added later.
+
+Every time we type :
+ls -l 
+
+the shell:
+1- Reads our command from input
+2- Parses it into executable and arguments.
+3- Creates a new process (fork());
+4- Runs the command (exec())
+5- Wait for it to finish (wait())
+
+Core Concept (Analogy)
+Think fo the shell as a conductor in a orchestra.
+=> The shell does not make the music itself, it just coordinates musicians (processes).
+=> Each command you type is a musician who plays independently.
+=> The shell's job is to start, stop, and monitor them , safely and in sync.
