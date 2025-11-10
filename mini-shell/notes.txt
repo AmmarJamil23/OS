@@ -19,3 +19,16 @@ Think fo the shell as a conductor in a orchestra.
 => The shell does not make the music itself, it just coordinates musicians (processes).
 => Each command you type is a musician who plays independently.
 => The shell's job is to start, stop, and monitor them , safely and in sync.
+
+
+Pipes and direction allows one process to talk to another through their outputs and inputs.
+
+Pipes:
+Think of pipes as tubes connecting two machines
+=> Machine A writes to the pipe.
+=> Machine B reads from it.
+
+Redirection is like plugging one end of the tube into a file instead of another process.
+Pipe => Tube between processes
+Redirection (>, <) => Redirects input/output to/from files.
+

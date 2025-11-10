@@ -4,6 +4,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <sys/wait.h>
 
 #define MAX_INPUT 1024
 #define MAX_ARGS 64
@@ -19,7 +20,8 @@ void parse_input(char *input, char **args) {
 
 int main() {
     char input[MAX_INPUT];
-    char *args[MAX_ARGS];
+    char *args1[MAX_ARGS], *args[MAX_ARGS];
+    int fd[2]
 
     while (1) {
         printf("mini-shell> ");
@@ -32,9 +34,35 @@ int main() {
 
         // Handle built-in commands
         if (strcmp(input, "exit") == 0) {
-            printf("Exiting mini-shell...\n");
+         
             break;
         }
+        
+        char *pipe_pos = strchr(input, '|');
+        if (pipe_pos){
+        	*pipe_pos = '\0';
+        	char *cmd1 = input;
+        	char *cmd2 = pipe_pos + 1;
+        	
+        	parse_input(cmd1, args1);
+        	parse_input(cmd2, args2);
+        	
+        	pipe(fd);
+        	pid_t pi1 = fork();
+        	
+        	if (pid1 == 0){
+        		
+        	
+        	}
+        
+        }
+        
+        
+        
+        
+        
+        
+        
 
         if (strncmp(input, "cd ", 3) == 0) {
             char *path = input + 3;
