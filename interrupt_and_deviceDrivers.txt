@@ -1,0 +1,7 @@
+Interrupts are a concept that allows the OS handles real-time events efficiently.
+Analogy:
+Think of the CPU as a teacher in a classroom(executing instructions).
+A student (hardware device) raises their hand.
+The teacher pauses teching and listens to the student (handles the interupt).
+After answering, the teacher resumes exactly where they left off. 
+
